@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    console.log(props)
     return(
         <nav className="nav-wrapper red darken-3">
             <div className="container">
-                <a className="brand-logo">Landing Page</a>
+                <a className="brand-logo left">Landing Page</a>
                 <ul className="right">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
@@ -16,4 +17,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default withRouter(Navbar);
