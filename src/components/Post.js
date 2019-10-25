@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deletePost } from '../actions/PostAction'
+import { Button } from 'reactstrap';
 
 class Post extends Component {
     handleClick = () => {
@@ -14,7 +15,7 @@ class Post extends Component {
                 <h4 className="center">{this.props.post.title}</h4>
                 <p>{this.props.post.body}</p>
                 <div className="center">
-                    <button className="btn grey" onClick={this.handleClick}>Delete Post</button>
+                    <Button color="danger" onClick={this.handleClick}>Delete Post</Button>
                 </div>
             </div>
         ) : (
