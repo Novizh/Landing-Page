@@ -1,20 +1,31 @@
 import React from 'react'
-import { NavLink, withRouter } from 'react-router-dom';
+import { withRouter, NavLink, Link } from 'react-router-dom'
+import { 
+    Navbar,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    Button } from 'reactstrap'
 
-const Navbar = (props) => {
-    console.log(props)
+const Navigation = (props) => {
     return(
-        <nav className="nav-wrapper red darken-3">
-            <div className="container">
-                <a className="brand-logo left">Landing Page</a>
-                <ul className="right">
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                </ul>
-            </div>
-        </nav>
+        <div>
+            <Navbar color="primary" light expand="md">
+                <NavbarBrand href="/" color="white">Landing Page</NavbarBrand>
+                <Nav className="ml-auto" navbar>
+                    <NavItem> 
+                        <Button color="primary" tag={Link} to="/">Home</Button>
+                    </NavItem>
+                    <NavItem> 
+                        <Button color="primary" tag={NavLink} to="/about">About</Button>
+                    </NavItem>
+                    <NavItem> 
+                        <Button color="primary" tag={NavLink} to="/contact">Contact</Button>
+                    </NavItem>
+                </Nav>
+            </Navbar>
+        </div>
     )
 }
 
-export default withRouter(Navbar);
+export default withRouter(Navigation);

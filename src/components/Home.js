@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../logo.png'
 import { connect } from 'react-redux'
+import { Alert } from 'reactstrap'
 
 class Home extends Component {
     render() {
@@ -22,11 +23,13 @@ class Home extends Component {
                 )
             })
         ) : (
-            <div className="center">No posts yet.</div>
+            <Alert color="primary">
+                No posts yet.
+            </Alert>
         )
         return (
             <div className="container home">
-                <h4 className="center">Home</h4>
+                <h1>Home</h1>
                 {postList}
             </div>
         )
