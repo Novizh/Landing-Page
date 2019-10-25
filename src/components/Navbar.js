@@ -11,10 +11,10 @@ const Navigation = (props) => {
     return(
         <div>
             <Navbar color="primary" light expand="md">
-                <NavbarBrand href="/" color="white">Landing Page</NavbarBrand>
+                <NavbarBrand href="/" className="text-white">Landing Page</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem> 
-                        <Button color="primary" tag={Link} to="/">Home</Button>
+                        <Button color="primary" tag={NavLink} to="/">Home</Button>
                     </NavItem>
                     <NavItem> 
                         <Button color="primary" tag={NavLink} to="/about">About</Button>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../logo.png'
 import { connect } from 'react-redux'
-import { Alert } from 'reactstrap'
+import { Alert, Container, Row, Col } from 'reactstrap'
 
 class Home extends Component {
     render() {
@@ -11,15 +11,16 @@ class Home extends Component {
         const postList = posts.length ? (
             posts.map(post => {
                 return(
-                    <div className="post card" key={post.id}>
-                    <img src={Logo} alt="react" />
-                        <div className="card-content">
-                            <Link to={'/' + post.id}>
-                                <span className="card-title red-text">{post.title}</span>
-                            </Link>
-                            <p>{post.body}</p>
+                    <Col xs="12" className="mb-2">
+                        <div className="post card" key={post.id}>
+                            <div className="card-content">
+                                <Link to={'/' + post.id}>
+                                    <span className="card-title red-text">{post.title}</span>
+                                </Link>
+                                <p>{post.body}</p>
+                            </div>
                         </div>
-                    </div>
+                    </Col>
                 )
             })
         ) : (
@@ -28,11 +29,11 @@ class Home extends Component {
             </Alert>
         )
         return (
-            <div className="container home">
+            <Container>
                 <h1>Home</h1>
                 <hr />
-                {postList}
-            </div>
+                <Row>{postList}</Row>
+            </Container>
         )
     }
 }

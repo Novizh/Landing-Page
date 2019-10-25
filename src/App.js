@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Jumbotron>
+        <Jumbotron style={{height: "100vh"}}>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
