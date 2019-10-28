@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Alert } from 'reactstrap'
-import '../../node_modules/react-vis/dist/style.css';
+import '../../node_modules/react-vis/dist/style.css'; // go back two directories to access module in the root folder
 import {
     XYPlot,
     VerticalGridLines,
@@ -17,6 +17,18 @@ class Chart extends Component {
             {x: 'Mall C', y: 15},
             {x: 'Mall D', y: 20}
         ];
+        const data2 = [
+            {x: 'Mall A', y: 5},
+            {x: 'Mall B', y: 10},
+            {x: 'Mall C', y: 5},
+            {x: 'Mall D', y: 15}
+        ];
+        const data3 = [
+            {x: 'Mall A', y: 15},
+            {x: 'Mall B', y: 5},
+            {x: 'Mall C', y: 20},
+            {x: 'Mall D', y: 10}
+        ];
         return (
             <Container>
                 <h1>Tenant's Chart</h1>
@@ -28,6 +40,8 @@ class Chart extends Component {
                     <XAxis />
                     <YAxis title="Points"/>
                     <VerticalBarSeries data={data} />
+                    <VerticalBarSeries data={data2} />
+                    <VerticalBarSeries data={data3} />
                 </XYPlot>
             </Container>
         )
