@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../logo.png'
 import { connect } from 'react-redux'
 import { Alert, Container, Row, Col } from 'reactstrap'
 
@@ -25,7 +24,7 @@ class Home extends Component {
             })
         ) : (
             <Alert color="primary">
-                No posts yet.
+                No posts yet in this app.
             </Alert>
         )
         return (

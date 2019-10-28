@@ -14,13 +14,16 @@ const Navigation = (props) => {
                 <NavbarBrand href="/" className="text-white">Landing Page</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem> 
-                        <Button color="primary" tag={NavLink} to="/">Home</Button>
+                        <Button color="primary" tag={Link} to="/">Home</Button>
                     </NavItem>
                     <NavItem> 
                         <Button color="primary" tag={NavLink} to="/about">About</Button>
                     </NavItem>
                     <NavItem> 
                         <Button color="primary" tag={NavLink} to="/contact">Contact</Button>
+                    </NavItem>
+                    <NavItem> 
+                        <Button color="primary" tag={NavLink} to="/chart">Chart</Button>
                     </NavItem>
                 </Nav>
             </Navbar>
